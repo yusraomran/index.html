@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume/CV design</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+      $(".full_info_wrap .tabs ul li").click(function(){
+        $(".full_info_wrap .tabs ul li").removeClass("active");
+        $(this).addClass("active");
+
+        var datali = $(this).attr("data-li");
+
+        $(".full_info_item").hide();
+
+        if(datali == "experience"){
+          $(".experience").show();
+        }
+        else if(datali == "education"){
+          $(".education").show();
+        }
+        else if(datali == "contact"){
+          $(".contact").show();
+        }
+        else{
+          console.log("Loding...");
+        }
+      })
+
+    })
+  </script>
+</head>
+<body>
+
+<div class="wrappe">
+    <div class="resume">
+
+        <div class="profile_info">
+          <div class="profile_img">
+          <img src="profile_pic.jpg" alt="profile_pic">
+        </div>
+        <div class="profile_data">
+          <p class="name">YUSRA OMRAN</p>
+          <span> jeddah,KAS</span>
+        </div>
+        <div class="view_more_btn">
+            <a href="#">view More</a>
+        </div>
+      </div>
+        <div class="Skills">
+          <div class="title">
+              SKills
+          </div>
+          <ul>
+            <li>
+                <div class="skill_item html">
+                    <div class="icon"></div>
+                    <div class="text">HTML</div>
+                </div>      
+            </li>
+            <li>
+                <div class="skill_item css">
+                    <div class="icon"></div>
+                    <div class="text">CSS</div>
+                </div>      
+            </li>
+            <li>
+                <div class="skill_item js">
+                    <div class="icon"></div>
+                    <div class="text">Javascript</div>
+                </div>      
+            </li>
+            <li>
+                <div class="skill_item photoshop">
+                    <div class="icon"></div>
+                    <div class="text">photoshop</div>
+                </div>      
+            </li>
+          </ul>
+        </div>
+
+        <div class="full_info_wrap">
+            <div class="tabs">
+                <ul>
+                  <li data-li="experience" class="_active_">Experience</li>
+                  <li data-li="education">education</li>
+                  <li data-li="contact">contact</li>
+                </ul>
+            </div>
+            <div class="full_info">
+                <div class="full_info_item Experience">
+                     <div class="title">Work Experience </div>
+
+                     <div class="full_info_wrap">
+                          <ul>
+                            <li>
+                              <div class="sub_title">
+                                     2018-2019
+
+                              </div>
+                              <div class="info_item">
+                                <div class=info_title >
+                                  maxima corporation
+                                </div>
+                                <div class="data">
+                                  coustomer service
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                </div>
+                <div class="full_info_item education" style="display: none;">
+                  <div class="info_wrap">
+                      <ul>
+                        <li>
+                          <div class="sub_title">
+                               2019-2021
+                          </div>
+                
+                <div class="info_item">
+                  <div class="info_title">
+                    a studen at a university of the cordilleras - IT
+                  </div>
+                </div>
+                        </li>
+                        <li>
+                          <div class="sub_title">
+                            2017   
+                          </div>
+                
+                <div class="info_item">
+                  <div class="info_title">
+                    113 School
+                  </div>
+                </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>  
+                  
+                </div>
+                <div class="full_info_item contact" style="display: none;">
+
+                  <div class="info_wrap">
+                    <ul>
+                      <li>
+                        <span class="info_q">Email</span>
+                        <span class="info_a">omaranyosra@gmail.com</span>
+                      </li>
+                      <li>
+                        <span class="info_q">Phone number</span>
+                        <span class="info_a">
+                             0569287039
+                        </span>
+                      </li>
+                      <li>
+                        <span class="info_q">Facebook</span>
+                        <span class="info_a">https://www.facebook.com/yosra.omran.9</span>
+                      </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
